@@ -1,3 +1,4 @@
+import ProductVideo from "@/component/ProductVideo/ProductVideo"
 import Layout from "@/component/layout/layout"
 import WelcomePage from "@/component/welcomePage/welcomePage"
 
@@ -5,6 +6,7 @@ import WelcomePage from "@/component/welcomePage/welcomePage"
 export default function Home() {
   return (
    <>
+   <ProductVideo/>
    <WelcomePage/>
    </>
   )

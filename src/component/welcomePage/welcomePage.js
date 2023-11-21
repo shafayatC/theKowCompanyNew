@@ -1,6 +1,6 @@
 import Image from "next/image";
 import sideArt from "../../images/sideArt-1.png"
-import logo from "../../images/logo.png"
+import logowhite from "../../images/logo2.png"
 
 const WelcomePage = () => {
     return (
@@ -18,9 +18,9 @@ const WelcomePage = () => {
                                     />
 
                                 </div>
-                                <div className="absolute top-20 left-20">
+                                <div className="absolute top-36 left-20">
                                     <Image
-                                        src={logo}
+                                        src={logowhite}
                                         width={200}
                                         height={150}
                                         alt="sideArt"

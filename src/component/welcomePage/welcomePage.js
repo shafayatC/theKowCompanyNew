@@ -40,7 +40,7 @@ const WelcomePage = () => {
                                 product images that exude sophistication and elegance, allowing your merchandise to shine in its full glory.
                                 At The KOW Company, we dont just meet your expectations; we surpass them. Our dedication to perfection and innovative
                                 solutions will empower your brand to rise above the competition, turning every visual into a masterpiece.</p>
-                        </div>   
+                            </div>    
                 </div>
             </div>
 

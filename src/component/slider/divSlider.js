@@ -1,29 +1,35 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-const DivSlider = ({width, currentPos, sliderList}) => {
+const DivSlider = ({width, currentPos, childLength, children}) => {
 
+    const [getSliderWith, setSliderWidth] = useState(0); 
+    const [sliderId] = useState(`slider_${Math.random().toString(36).substr(2, 9)}`);
+
+    //const sliderWidth = parseInt(width)
+    const sliderParrentWidth = ()=>{
+        const sliderParrent = document.getElementById(`${sliderId}`);
+        console.log(sliderParrent)
+        sliderParrent && setSliderWidth(sliderParrent.offsetWidth); 
+    }
+    const sliderRef = useRef(null);
+
+    // useEffect(()=>{
+    //     sliderParrentWidth();
+    // }, [sliderId])
+
+    useEffect(() => {
+       if (sliderRef.current) {
+        console.log(sliderRef); 
+          setSliderWidth((slwidth)=>sliderRef.current.offsetWidth);
+       }
+    }, [sliderId]);
     return (
         <>
-        <div className='relative overflow-hidden' style={{width: width+'px', height: '100%'}} >
-            <div className='transition-all duration-300 absolute top-0 left-0 h-full' style={{width: (width*sliderList.length)+'px', left: currentPos+'px'}}>
-            {sliderList.map((item, index) => (
-                <div className='float-left relative h-full' style={{width: width+'px', height: '100%'}}>
-                    <div className='w-full h-full'>
-                        <Image src={item.after} alt="slider"
-                            sizes="100vw"
-                            style={{
-                                width: '100%',
-                                height: 'auto',
-                            }}
-                            width={300}
-                            height={250}
-                        />
-                        {/* <Image src={item.after} width={300} height={300} alt="slider" /> */}
-                    </div>
-                    <h4 className='absolute bottom-0 left-0'>{item.lebel}</h4>
-                </div>
-            ))}
+        {console.log(getSliderWith)}
+        <div ref={sliderRef} id={sliderId} className='relative overflow-hidden' style={{height: '100%'}} >
+            <div className='transition-all duration-300 absolute top-0 left-0 h-full' style={{width: (getSliderWith*childLength)+'px', left: currentPos+'px'}}>
+            {children}
             </div>
         </div>
         </>

@@ -30,21 +30,18 @@ const DivSliderParrent = () => {
     }
 
     const nextSlidFunc = () => {
-        setCurrentPosition((pos) => pos - divStyle.width);
+        setCurrentPosition((pos) => pos - 1);
     }
     const prevSlidFunc = () => {
-        setCurrentPosition((pos) => pos + divStyle.width);
+        setCurrentPosition((pos) => pos + 1);
     }
     return (
         <>
-            {console.log(currentPosition)}
-            {console.log(-((sliderList.length - 1) * divStyle.width))}
             <div className='flex gap-4'>
                 <button disabled={currentPosition === 0} className='bg-slate-500 text-white px-7' onClick={prevSlidFunc}>Prev</button>
-                <button disabled={currentPosition === -((sliderList.length - 1) * divStyle.width)} className='bg-slate-500 text-white px-7' onClick={nextSlidFunc}>Next</button>
+                <button disabled={currentPosition === -((sliderList.length - 1))} className='bg-slate-500 text-white px-7' onClick={nextSlidFunc}>Next</button>
             </div>
-            <div className='h-[300px] grid grid-cols-3 '>
-
+            <div className='h-[300px] grid grid-cols-[auto_500px_auto] gap-3'>
                 <DivSlider width={divStyle.width} currentPos={currentPosition} childLength={sliderList.length}>
                     {sliderList.map((item, index) => (
                         <div className='float-left relative h-full' style={{ width: divStyle.width + 'px', height: '100%' }}>

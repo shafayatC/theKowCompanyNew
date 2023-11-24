@@ -1,0 +1,56 @@
+import Image from 'next/image';
+import React from 'react';
+import blog1 from "../../images/blog1.png"
+import blog2 from "../../images/blog2.png"
+import blog3 from "../../images/blog3.png"
+import blog4 from "../../images/blog4.png"
+// import blog5 from "../../images/blog3.png"
+// import blog6 from "../../images/blog3.png"
+
+const BlogPage = () => {
+    return (
+        <div className='bg bg-white'>
+            <div className='container mx-auto'>
+                <div className="flex justify-center">
+                    <h1 className='text-[40px] w-[610px] pt-28 font-bold border-b-2 border-[#7C9C30] '>
+                        CREATIVE INDUSTRY TRENDS!
+                    </h1>
+                </div>
+
+                <div className='pt-20'>
+                    <h1 className='text-center text-2xl text-[#696666]'>RECENT POSTS</h1>
+
+                    <div className='flex justify-center items-center gap-3 pt-3'>
+                        <div className=''>
+                            <Image src={blog1}
+                                width={350}
+                                alt='trends photo'
+                            />
+                            <h1 className='text-center pt-3 font-semibold'>INDUSTRY TRENDS ON 2D</h1>
+                        </div>
+                        <div className=''>
+                            <Image src={blog2}
+                                width={350}
+                                alt='trends photo'
+                            />
+                            <h1 className='text-center pt-3 font-semibold'>INDUSTRY TRENDS ON 3D</h1>
+
+                        </div>
+                        <div className=''>
+                            <Image src={blog3}
+                                width={350}
+                                alt='trends photo'
+                            />
+
+                            <h1 className='text-center pt-3 font-semibold'>INDUSTRY TRENDS ON STUDIO</h1>
+                        </div>
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+    );
+};
+
+export default BlogPage;

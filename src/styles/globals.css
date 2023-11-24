@@ -13,3 +13,11 @@
   body{
     font-family: 'Roboto Condensed', sans-serif;
   }
+
+
+  .bg{
+    background-image: url("../images/blog-BG2.png");
+    background-repeat: no-repeat;
+    background-size: 100% 75%;
+   
+}

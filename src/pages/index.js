@@ -1,8 +1,10 @@
 import BluePrint from "@/component/BluePrint/BluePrint"
 import GetUpdate from "@/component/GetUpdate/GetUpdate"
+
 import IndustryTrends from "@/component/IndustryTrends/IndustryTrends"
 import Integration from "@/component/Integration/Integration"
 import ProductVideo from "@/component/ProductVideo/ProductVideo"
+import Retouched from "@/component/Retouched/Retouched"
 import TheSquad from "@/component/TheSquad/TheSquad"
 import Layout from "@/component/layout/layout"
 import DivSliderParrent from "@/component/slider/divSliderParrent"
@@ -16,6 +18,7 @@ export default function Home() {
       <WelcomePage />
       <div className="bg-[#DEE2E2] py-3 flex flex-col">
         <DivSliderParrent />
+        <Retouched/>
         <Integration/>
         <TheSquad/>
         <BluePrint/>

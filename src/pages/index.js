@@ -1,3 +1,4 @@
+import BluePrint from "@/component/BluePrint/BluePrint"
 import GetUpdate from "@/component/GetUpdate/GetUpdate"
 import IndustryTrends from "@/component/IndustryTrends/IndustryTrends"
 import Integration from "@/component/Integration/Integration"
@@ -17,6 +18,7 @@ export default function Home() {
         <DivSliderParrent />
         <Integration/>
         <TheSquad/>
+        <BluePrint/>
         <IndustryTrends/>
         <GetUpdate/>
       </div>

@@ -8,8 +8,8 @@ const BlogPageDetails = () => {
         <div className='bg-white pt-28'>
             <div className='bg-[#DEE2E2]'>
                 <div className='container mx-auto'>
-                    <div className='py-40 flex flex-col gap-40'>
-                        <div className='flex justify-center items-end gap-12'>
+                    <div className='pt-40 pb-5 sm:pb-20 flex flex-col gap-40'>
+                        <div className='flex flex-col md:flex-row justify-center items-end gap-12 px-2 md:px-0'>
                             <div>
                                 <h1 className='text-[24px] leading-3 font-semibold text-end'>Easy Product</h1>
                                 <h1 className='text-[24px] font-semibold text-end border-b-2 border-[#7C9C30]'>Photography Solutions for Small Business</h1>
@@ -31,7 +31,7 @@ const BlogPageDetails = () => {
                                 />
                             </div>
                         </div>
-                        <div className='flex justify-center items-end gap-12'>
+                        <div className='flex flex-col-reverse md:flex-row  justify-center items-end gap-12 px-2 md:px-0'>
 
                             <div>
                                 <Image src={blog5}
@@ -55,7 +55,7 @@ const BlogPageDetails = () => {
                             </div>
 
                         </div>
-                        <div className='flex justify-center items-end gap-12'>
+                        <div className='flex flex-col md:flex-row justify-center items-end gap-12 px-2 md:px-0'>
                             <div>
                                 <h1 className='text-[24px] leading-3 font-semibold text-end'>5 Important</h1>
                                 <h1 className='text-[24px] font-semibold text-end border-b-2 border-[#7C9C30]'>Photography Tips for Beginners</h1>

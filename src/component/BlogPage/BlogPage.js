@@ -20,7 +20,7 @@ const BlogPage = () => {
                 <div className='pt-20'>
                     <h1 className='text-center text-2xl text-[#696666]'>RECENT POSTS</h1>
 
-                    <div className='flex justify-center items-center gap-3 pt-3'>
+                    <div className='flex flex-col md:flex-row justify-center items-center gap-3 pt-3'>
                         <div className=''>
                             <Image src={blog1}
                                 width={350}
